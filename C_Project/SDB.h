@@ -23,7 +23,7 @@ uint8 SDB_GetUsedSize(void);
 bool SDB_AddEntry(void);
 void SDB_DeletEntry (uint32 id);
 bool SDB_ReadEntry (uint32 id);
-void SDB_GetList (uint8 * count, uint32 * list);
+void SDB_GetList (uint8* Count, uint32* List);
 bool SDB_IsIdExist (uint32 id);
 
 

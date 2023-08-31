@@ -23,7 +23,7 @@ uint8 SDB_GetUsedSize()
 
     for(int i = 0 ;i< 9 ;i++)
     {
-        if(students[i].Student_ID != -1)
+        if(students[i].Student_ID != 0)
             size++;
         else
             break;
@@ -141,19 +141,21 @@ bool SDB_ReadEntry (uint32 id)
     return true;
 }
 
-void SDB_GetList (uint8 * count, uint32 * list)
+void SDB_GetList (uint8* Count, uint32* List)
 {
+    uint8 ctr = 0;
     int j = 0;
     for(int i = 0;i<9;i++)
     {
         if(students[i].Student_ID !=0)
         {
-            list[j] = students[i].Student_ID;
+            List[j] = students[i].Student_ID;
             j++;
-            count++;
+            ctr++;
         }
 
     }
+    *Count = ctr;
 
 }
 
