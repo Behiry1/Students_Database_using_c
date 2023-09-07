@@ -2,6 +2,7 @@
 #include "SDB.h"
 static uint32 entry = 0;
 
+//intialize the ids of the struct students with 0
 void intialize_Struct()
 {
     for(int i = 0 ; i < 10 ; i++)
@@ -10,6 +11,7 @@ void intialize_Struct()
     }
 }
 
+//check if the database is full or not
 bool SDB_IsFull()
 {
     if(entry > 9)
@@ -19,6 +21,7 @@ bool SDB_IsFull()
 
 }
 
+//get the used size of the database
 uint8 SDB_GetUsedSize()
 {
     uint8 size = 0;
@@ -35,6 +38,7 @@ uint8 SDB_GetUsedSize()
 
 }
 
+//add a new entry to the database
 bool SDB_AddEntry()
 {
 
@@ -112,6 +116,7 @@ bool SDB_AddEntry()
     return true;
 }
 
+//delete an entry from the database
 void SDB_DeletEntry (uint32 id)
 {
 
@@ -130,6 +135,7 @@ void SDB_DeletEntry (uint32 id)
 
 }
 
+//read the data of certain entry if exist
 bool SDB_ReadEntry (uint32 id)
 {
     if(SDB_IsIdExist(id))
@@ -145,6 +151,7 @@ bool SDB_ReadEntry (uint32 id)
     return true;
 }
 
+//have an array of the actual ids in the database
 void SDB_GetList (uint8* Count, uint32* List)
 {
     uint8 ctr = 0;
@@ -163,6 +170,7 @@ void SDB_GetList (uint8* Count, uint32* List)
 
 }
 
+//check if a certain exist in the database or not
 bool SDB_IsIdExist (uint32 id)
 {
     for(int i = 0 ; i< 10;i++)
@@ -174,6 +182,7 @@ bool SDB_IsIdExist (uint32 id)
     return false;
 }
 
+//used to clear the input of the user, if he enters a non valid input
 void flush()
 {
     char c;
@@ -181,6 +190,7 @@ void flush()
     return;
 }
 
+//used for getting the entry of a certain id
 int Get_Entry(uint32 id)
 {
     for(int i = 0 ; i<10;i++)
@@ -190,6 +200,7 @@ int Get_Entry(uint32 id)
     }
 }
 
+//used for shifting the data after deleting an entry
 void Shift_Data(int start)
 {
     for(int i = start ; i < 10 ; i++)
@@ -208,8 +219,6 @@ void Shift_Data(int start)
         }
 
         students[i] = students[i+1];
-
     }
-
 }
 

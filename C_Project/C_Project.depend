@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1692838798 source:d:\project\students database using c\students_database_using_c\c_project\main.c
+1694047428 source:d:\project\students database using c\students_database_using_c\c_project\main.c
 	<stdio.h>
 	<stdlib.h>
 	"STD.h"
@@ -9,11 +9,11 @@
 	"STD.h"
 	"SDB.h"
 
-1692838717 d:\project\students database using c\students_database_using_c\c_project\std.h
+1694047428 d:\project\students database using c\students_database_using_c\c_project\std.h
 
-1694046461 source:d:\project\students database using c\students_database_using_c\c_project\sdbapp.c
+1694047428 source:d:\project\students database using c\students_database_using_c\c_project\sdbapp.c
 	"SDB.h"
 
-1693488656 d:\project\students database using c\students_database_using_c\c_project\sdb.h
+1694047428 d:\project\students database using c\students_database_using_c\c_project\sdb.h
 	"STD.h"
 
